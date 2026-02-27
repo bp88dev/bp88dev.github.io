@@ -22,6 +22,14 @@
             left: 0;
             right: 0;
         }
+        fixhr {
+            width: calc(100% - 75px);
+            height: 1px;
+            display: inline-block;
+            background-color: #313244;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
     </style>
 </head>
 <body style="background-color: #11111b; font-family: 'Montserrat2', 'Montserrat', serif;">
@@ -31,9 +39,22 @@
     <p style="color: #cdd6f4; margin-bottom: 0; font-weight: 400;">Status:</p>
     <p style="color: #cdd6f4; margin-bottom: 0; font-weight: 400; margin-top: 0; max-width: 100%">They want me to verify my identity. After 69 hours. Nice.</p>
     <p style="color: #a6adc8; margin-bottom: 0; font-weight: 400; margin-top: 0; max-width: 100%">"Before we can continue processing your enrollment in the Apple Developer Program, we need a copy of your valid government-issued photo ID."</p>
+    <fixhr></fixhr>
+    <p style="color: #a6adc8; margin-bottom: 0; font-weight: 400; margin-top: 0;">Hours since I paid Apple $100:</p>
+    <h1 style="color: #f38ba8; margin-top: 0; font-weight: 700;" id="stopwatch">...</h1>
 </div>
 <div class="footer">
-    <h6 style="color: #a6adc8;">Made with spite by Benji/<a href="https://github.com/bp88dev" style="color: #74c7ec">bp88dev</a></h6>
+    <h6 style="color: #a6adc8; margin-bottom: 0;">"Your purchase may take up to 48 hours to process."</h6>
+    <h6 style="color: #a6adc8; margin-top: 5px;">Made with spite by Benji/<a href="https://github.com/bp88dev" style="color: #74c7ec">bp88dev</a></h6>
 </div>
+<script>
+    let initialTimestamp = 1771981283;
+    function setTimer() {
+        const elapsed = (Date.now()/1000 - initialTimestamp) / 3600;
+        document.getElementById("stopwatch").innerText = elapsed.toFixed(5);
+        requestAnimationFrame(setTimer);
+    }
+    requestAnimationFrame(setTimer);
+</script>
 </body>
 </html>
