@@ -35,13 +35,13 @@
 <body style="background-color: #11111b; font-family: 'Montserrat2', 'Montserrat', serif;">
 <div class="container">
     <p style="color: #a6adc8; margin-bottom: 0; font-weight: 400;">Do I have Apple Developer yet?</p>
-    <h1 style="color: #f38ba8; margin-top: 0; font-weight: 700;">No.</h1>
+    <h1 style="color: #a6e3a1; margin-top: 0; font-weight: 700;">Yes!!!</h1>
     <p style="color: #cdd6f4; margin-bottom: 0; font-weight: 400;">Status:</p>
-    <p style="color: #cdd6f4; margin-bottom: 0; font-weight: 400; margin-top: 0; max-width: 100%">They want me to verify my identity. After 69 hours. Nice.</p>
-    <p style="color: #a6adc8; margin-bottom: 0; font-weight: 400; margin-top: 0; max-width: 100%">"Before we can continue processing your enrollment in the Apple Developer Program, we need a copy of your valid government-issued photo ID."</p>
+    <p style="color: #cdd6f4; margin-bottom: 0; font-weight: 400; margin-top: 0; max-width: 100%">Apple ate my money, so I sent in a support ticket. They realised how long I had waited, and gave me a refund. What I wasn't expecting, however, was that they activated my account as well! Thank you, Apple, you really didn't have to do that! They also gave me a direct line to support should I have any more problems. I cannot stress how greatful I am for this. Thank you, thank you, thank you.</p>
+    <p style="color: #a6adc8; margin-bottom: 0; font-weight: 400; margin-top: 0; max-width: 100%">"My name is Andrew and I am a senior Advisor for Developer Support. We greatly appreciate your patience awaiting a reply as we are currently experiencing a high volume of email communications from developers, which has greatly delayed our response. As an exception to our policy, I’ve processed a refund for [redacted]. [...] I'm your point of contact for case [redacted]. To contact me, you can reply to this email or click the link below to leave a voice or text message."</p>
     <fixhr></fixhr>
     <p style="color: #a6adc8; margin-bottom: 0; font-weight: 400; margin-top: 0;">Hours since I paid Apple $100:</p>
-    <h1 style="color: #f38ba8; margin-top: 0; font-weight: 700;" id="stopwatch">...</h1>
+    <h1 style="color: #a6e3a1; margin-top: 0; font-weight: 700;" id="stopwatch">...</h1>
 </div>
 <div class="footer">
     <h6 style="color: #a6adc8; margin-bottom: 0;">"Your purchase may take up to 48 hours to process."</h6>
@@ -50,7 +50,8 @@
 <script>
     let initialTimestamp = 1771981283;
     function setTimer() {
-        const elapsed = (Date.now()/1000 - initialTimestamp) / 3600;
+        //const elapsed = (Date.now()/1000 - initialTimestamp) / 3600;
+        const elapsed = (1784934900 - initialTimestamp) / 3600;
         document.getElementById("stopwatch").innerText = elapsed.toFixed(5);
         requestAnimationFrame(setTimer);
     }
